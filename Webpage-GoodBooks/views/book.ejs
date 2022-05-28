@@ -1,0 +1,36 @@
+<%- include("partials/header"); -%>
+
+<!-- Book which is searched -->
+<div class="book_displayed card">
+  <div class="row card-body">
+    <div class="col-lg-6 card-text" style="padding-top:2%;">
+      <p>Book Title : <%=title%> </p>
+      <p>Author : <%=author%></p>
+      <p>Rating : <%=rating%></p>
+      <p>Genre : <%=genre%></p>
+    </div>
+    <div class="col-lg-6">
+      <p><img class="book_img" src="<%=image%>" alt=""></p>
+    </div>
+  </div>
+</div>
+
+<!-- 5 recommended books-->
+<h3 style="padding:5%; font-size:2rem;">Recommended</h3>
+<% for(var i=0;i<books.length;i++){%>
+<div class="book_displayed card">
+  <div class="row card-body">
+    <div class="col-lg-6 card-text" style="padding-top:2%;">
+      <p>Book Title : <%=books[i].title%> </p>
+      <p>Author : <%=books[i].author%></p>
+      <p>Rating : <%=books[i].rating%></p>
+      <p>Genre : <%=books[i].genre%></p>
+    </div>
+    <div class="col-lg-6">
+      <p><img class="book_img" src="<%=books[i].image%>" alt=""></p>
+    </div>
+  </div>
+</div>
+<% }; %>
+
+<%- include("partials/footer"); -%>
