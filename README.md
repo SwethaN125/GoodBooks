@@ -11,6 +11,7 @@ Technologies used:
 
 Working:
 1. Searches for a book and gets the details
+(The search should be given like this "Given Like This")
 2. Recommend few books based on the search.
 3. The user gets a list of books based on the genre of the book searched.
 
