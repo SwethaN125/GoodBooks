@@ -30,7 +30,7 @@ const Book = mongoose.model("Book", booksSchema);
 var Book_Found = {};
 
 app.get("/", function(req, res) {
-  res.render("home");
+  res.render("home",{message:"Hello!"});
 });
 
 app.post("/", function(req, res) {
@@ -58,7 +58,7 @@ app.post("/", function(req, res) {
           books: Book_Found
         });
       } else {
-        res.render("home");
+        res.render("home",{message:"Sorry! Searched book not found!"});
       }
     });
   }
