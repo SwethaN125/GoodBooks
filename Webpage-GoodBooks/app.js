@@ -48,7 +48,7 @@ app.post("/", function(req, res) {
           if (find.title != found.title) {
             Book_Found = find;
           }
-        }).limit(5);
+        }).limit(5).sort({"rating":-1}).skip({"title":"book1"});
         res.render("book", {
           title: found.title,
           author: found.author,
